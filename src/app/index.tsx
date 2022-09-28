@@ -11,6 +11,7 @@ import { Helmet } from 'react-helmet-async';
 import { Switch, Route, BrowserRouter } from 'react-router-dom';
 
 import { GlobalStyle } from 'styles/global-styles';
+import '../styles/custom-bootstrap.scss';
 
 import { HomePage } from './pages/HomePage/Loadable';
 import { NotFoundPage } from './components/NotFoundPage/Loadable';
@@ -21,9 +22,9 @@ import { Navbar } from './components/Navbar';
 export function App() {
   const { i18n } = useTranslation();
   return (
-    <>
-      <Navbar />
+    <div className="container-fluid">
       <BrowserRouter>
+        <Navbar />
         <Helmet
           titleTemplate="%s - React Boilerplate"
           defaultTitle="React Boilerplate"
@@ -39,6 +40,6 @@ export function App() {
         </Switch>
         <GlobalStyle />
       </BrowserRouter>
-    </>
+    </div>
   );
 }
