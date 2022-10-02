@@ -4,6 +4,7 @@
  *
  */
 import React, { memo } from 'react';
+import './style.css';
 import styled from 'styled-components/macro';
 import { useTranslation } from 'react-i18next';
 import { messages } from './messages';
@@ -35,12 +36,14 @@ export const Navbar = memo((props: Props) => {
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <div className={'navbar-nav me-auto'}></div>
-          <div className="d-flex">
-            <NavLink to="/contacts" className={''}>
+          <div className="d-flex navbar-nav">
+            <NavLink to="/contacts" className="nav-item nav-link nav-margin">
               Contacts
             </NavLink>
-            <NavLink to="contacts">Contacts</NavLink>
-            <NavLink to="contacts">Contacts</NavLink>
+            <NavLink to="faq" className="nav-item nav-link nav-margin">
+              FAQ
+            </NavLink>
+            <button className="btn btn-danger">CONNECT WALLET</button>
           </div>
         </div>
       </div>
