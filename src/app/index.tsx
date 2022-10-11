@@ -17,14 +17,14 @@ import { HomePage } from './pages/HomePage/Loadable';
 import { NotFoundPage } from './components/NotFoundPage/Loadable';
 import { useTranslation } from 'react-i18next';
 import { About } from './pages/About/Loadable';
-import { Navbar } from './components/Navbar';
+import { NavBar } from './components/NavBar';
 
 export function App() {
   const { i18n } = useTranslation();
   return (
     <div className="container-fluid">
       <BrowserRouter>
-        <Navbar />
+        <NavBar />
         <Helmet
           titleTemplate="%s - React Boilerplate"
           defaultTitle="React Boilerplate"
