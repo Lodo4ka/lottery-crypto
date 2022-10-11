@@ -20,7 +20,8 @@ $link-decoration: none;
 
 :root {
   --white-font: #F3F3F3;
-  --main-color: linear-gradient(225.18deg, #EFE84B -20.96%, #D98B44 68.74%);
+  --sun-yellow-gradient: linear-gradient(237.32deg, #F8F037 -15.67%, rgba(210, 118, 33, 0.97) 81.92%);
+  --scared-tangerine-gradient: linear-gradient(246.42deg, #EFE84B -20.94%, #D98B44 65.19%);
   --border: 2px
 }
 
@@ -33,12 +34,56 @@ $link-decoration: none;
 }
 
 .btn {
-  --bs-btn-font-size: 22px
+  --bs-btn-font-size: 22px;
+  --bs-btn-font-weight: 700;
+  --bs-btn-color: #F3F3F3;
+  --bs-btn-hover-bg: none;
+}
+
+.btn-primary {
+  background: var(--sun-yellow-gradient);
+
+  &:hover {
+    transition: 0.2s;
+    background-position: 0 0;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  &.btn-lg {
+    padding: 18px 64px;
+    border-radius: 18px;
+  }
+
+  &.btn-sm {
+    padding: 6px 32px;
+    border-radius: 15px;
+  }
+}
+
+.btn-secondary {
+  background: var(--scared-tangerine-gradient);
+
+  &:hover {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  &.btn-sm {
+    padding: 6px 32px;
+    border-radius: 15px;
+  }
+}
+
+.btn-primary, .btn-secondary {
+  border: 0;
+  background-size: 130% auto;
+  background-position: 30% 0%;
+
+  &:hover {
+    background-position: 0 0;
+  }
 }
 
 .btn-outline-primary {
-  --bs-btn-color: #F3F3F3;
-  --bs-btn-hover-bg: none;
   font-weight: 600;
   border: 0;
   background-color: transparent;
@@ -60,9 +105,9 @@ $link-decoration: none;
     position: absolute;
     z-index: -1;
     inset: 0;
-    padding: 3px;
+    padding: 2px;
     border-radius: 10px;
-    background: var(--main-color);
+    background: var(--sun-yellow-gradient);
     -webkit-mask: 
       linear-gradient(#fff 0 0) content-box, 
       linear-gradient(#fff 0 0);
@@ -80,7 +125,7 @@ $link-decoration: none;
     width: 0;
     bottom: -1px;
     height: 3px;
-    background: var(--main-color);
+    background: var(--sun-yellow-gradient);
     height: 120%;
     left: -10%;
     transform: skewX(15deg);

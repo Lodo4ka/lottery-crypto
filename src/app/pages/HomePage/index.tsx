@@ -10,6 +10,9 @@ export function HomePage() {
         <title>HomePage</title>
         <meta name="description" content="A Boilerplate application homepage" />
       </Helmet>
+      <button className="btn btn-primary btn-lg">Click me</button>
+      <button className="btn btn-primary btn-sm">Click me</button>
+      <button className="btn btn-secondary btn-sm">Click me</button>
     </>
   );
 }
