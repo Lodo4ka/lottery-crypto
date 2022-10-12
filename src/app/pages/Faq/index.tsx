@@ -67,9 +67,9 @@ export function Faq(props: Props) {
             <FaqBarLetter>{item}</FaqBarLetter>
           ))}
         />
-        <div className="container">
-          {FaqHelpers.map(item => (
-            <FaqBlock>
+        <div className="container px-5">
+          {FaqHelpers.map((item, i) => (
+            <FaqBlock key={i}>
               <FaqHeader>{item.question}</FaqHeader>
               <FaqAnswer>— {item.answer}</FaqAnswer>
             </FaqBlock>

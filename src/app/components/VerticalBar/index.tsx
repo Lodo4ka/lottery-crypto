@@ -33,8 +33,8 @@ export function VerticalBar(props: Props) {
   console.log(props.components);
   return (
     <MenuWrapper>
-      {props.components.map(item => (
-        <MenuItem>{item}</MenuItem>
+      {props.components.map((item, i) => (
+        <MenuItem key={i}>{item}</MenuItem>
       ))}
     </MenuWrapper>
   );
