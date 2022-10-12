@@ -26,6 +26,7 @@ import reportWebVitals from 'reportWebVitals';
 
 // Initialize languages
 import './locales/i18n';
+import { BrowserRouter } from 'react-router-dom';
 
 const store = configureAppStore();
 const MOUNT_NODE = document.getElementById('root') as HTMLElement;
@@ -33,9 +34,9 @@ const MOUNT_NODE = document.getElementById('root') as HTMLElement;
 ReactDOMClient.createRoot(MOUNT_NODE!).render(
   <Provider store={store}>
     <HelmetProvider>
-      <React.StrictMode>
+      <BrowserRouter>
         <App />
-      </React.StrictMode>
+      </BrowserRouter>
     </HelmetProvider>
   </Provider>,
 );
