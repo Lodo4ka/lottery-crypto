@@ -22,7 +22,44 @@ $link-decoration: none;
   --white-font: #F3F3F3;
   --sun-yellow-gradient: linear-gradient(237.32deg, #F8F037 -15.67%, rgba(210, 118, 33, 0.97) 81.92%);
   --scared-tangerine-gradient: linear-gradient(246.42deg, #EFE84B -20.94%, #D98B44 65.19%);
-  --border: 2px
+  --border: 2px;
+  --main-color: linear-gradient(225.18deg, #EFE84B -20.96%, #D98B44 68.74%);
+}
+
+.modal {
+  --bs-modal-bg: rgba(34, 23, 47, 0.9) !important;
+  --bs-modal-color: #F3F3F3 !important;
+  --bs-modal-border-radius: 50px !important;
+}
+
+@media (min-width: 1200px) {
+  .modal-xl {
+    --bs-modal-width: auto !important;
+  }
+}
+
+.modal-title {
+  font-family: 'Jura-Regular', Helvetica, Arial, sans-serif;
+}
+
+.card {
+  --bs-card-bg: transparent !important;
+  --bs-card-border-radius: 16px !important;
+  --bs-card-border-width: 0px !important;
+  font-family: 'Jura-Regular', Helvetica, Arial, sans-serif;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 15px;
+  padding: 2.25px;
+  // for tranparent backround
+  -webkit-mask:
+          linear-gradient(#fff 0 0) content-box,
+          linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
 }
 
 @import '~bootstrap/scss/bootstrap.scss';
@@ -35,6 +72,10 @@ $link-decoration: none;
   color: var(--white-font);
   font-family: 'Jura-Medium', Helvetica, Arial, sans-serif;
   --bs-nav-link-font-size: 22px;
+}
+
+.card-text {
+  font-size: 1.75rem !important;
 }
 
 .btn {

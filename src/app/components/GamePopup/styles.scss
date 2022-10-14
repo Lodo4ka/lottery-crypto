@@ -1,0 +1,25 @@
+.card-custom {
+  min-width: 190px;
+  min-height: 310px;
+}
+
+.card-grey::before {
+  background: linear-gradient(180deg, #B4B4CA 0%, rgba(180, 180, 202, 0.2) 100%);
+}
+
+.card-blue::before {
+  background: linear-gradient(rgba(43, 79, 198, 1), rgba(43, 79, 198, 0.2));
+}
+
+.card-purple::before {
+  background: linear-gradient(rgba(137, 25, 184, 1), rgba(137, 25, 184, 0.2));
+}
+
+.card-yellow::before {
+  background: linear-gradient(rgba(239, 232, 75, 1), rgba(217, 139, 68, 1));
+}
+
+.btn-close {
+  right: 2%;
+  top: 5%;
+}
