@@ -186,3 +186,25 @@ $link-decoration: none;
 .container-fluid {
   padding: 0;
 }
+
+input {
+  background-color: transparent;
+  border-style: none;
+}
+
+.form-control {
+  background-color: transparent;
+  border: none;
+  color: varify(--main-text-color);
+}
+
+.form-control:focus {
+  color: varify(--main-text-color);
+  background-color: transparent;
+  border-color: unset;
+  box-shadow: none;
+}
+
+.form-control:disabled {
+  background-color: transparent;
+}

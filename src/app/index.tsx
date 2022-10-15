@@ -28,6 +28,7 @@ import { NavBar } from './components/NavBar';
 import { Footer } from './components/Footer';
 import styled from 'styled-components';
 import { BackgroundPattern } from 'svg/components';
+import { Game } from './pages/Game';
 
 const Layout = styled.div`
   position: relative;
@@ -82,6 +83,7 @@ export function App() {
               <Route exact path="/" component={HomePage} />
               <Route exact path="/faq" component={Faq} />
               <Route exact path="/about" component={About} />
+              <Route exact path="/game" component={Game} />
               <Route component={NotFoundPage} />
             </Switch>
           </ContentWrapper>

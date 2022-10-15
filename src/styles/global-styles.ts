@@ -69,11 +69,16 @@ export const GlobalStyle = createGlobalStyle`
     url(${JuraBoldWoff}) format("woff"),
     url(${JuraBoldTtf}) format("ttf");
   }
-
+  
+  :root {
+    --main-text-color: #F3F3F3; 
+  }
+  
   html,
   body {
     height: 100%;
     width: 100%;
+    color: var(--main-text-color);
   }
 
   body {
