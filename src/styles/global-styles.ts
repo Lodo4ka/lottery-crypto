@@ -90,14 +90,24 @@ export const GlobalStyle = createGlobalStyle`
     background: var(--main-color-bg);
   }
 
-  p,
-  label {
-    font-family: Georgia, Times, 'Times New Roman', serif;
-    line-height: 1.5em;
-  }
-
   input, select {
     font-family: inherit;
     font-size: inherit;
+  }
+
+  h1 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 70px;
+    color: #F3F3F3;
+  }
+
+  p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 33px;
+    color: #FFFFFF;
   }
 `;

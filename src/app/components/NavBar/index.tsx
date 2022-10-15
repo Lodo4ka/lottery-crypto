@@ -1,6 +1,6 @@
 /**
  *
- * Navbar
+ * NavBar
  *
  */
 import React, { memo } from 'react';
@@ -13,16 +13,18 @@ import { NavLink } from 'react-router-dom';
 
 interface Props {}
 
-export const Navbar = memo((props: Props) => {
+export const NavBar = memo((props: Props) => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { t, i18n } = useTranslation();
 
   return (
     <nav className="navbar navbar-expand-lg">
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">
-          <img src={Logo} alt="logo" />
-        </a>
+        <NavLink to="/">
+          <div className="navbar-brand">
+            <img src={Logo} alt="logo" />
+          </div>
+        </NavLink>
         <button
           className="navbar-toggler"
           type="button"
@@ -36,14 +38,14 @@ export const Navbar = memo((props: Props) => {
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <div className={'navbar-nav me-auto'}></div>
-          <div className="d-flex navbar-nav">
+          <div className="d-flex align-items-center navbar-nav">
             <NavLink to="/contacts" className="nav-item nav-link nav-margin">
               Contacts
             </NavLink>
-            <NavLink to="faq" className="nav-item nav-link nav-margin">
+            <NavLink to="/faq" className="nav-item nav-link nav-margin">
               FAQ
             </NavLink>
-            <button className="btn btn-danger">CONNECT WALLET</button>
+            <button className="btn btn-outline-primary">CONNECT WALLET</button>
           </div>
         </div>
       </div>
