@@ -6,7 +6,7 @@ import { breakpointHelpers } from 'utils/helpers';
 import { VerticalBar } from 'app/components/VerticalBar';
 import { IconLink } from 'app/components/IconLink';
 import { User, Gamepad, Docs } from 'svg/components';
-import { GamePopup } from '../../components/GamePopup';
+import { DonatePopup } from '../../components/DonatePopup';
 import { useState } from 'react';
 
 const HomePageWrapper = styled.div`
@@ -73,7 +73,7 @@ export function HomePage() {
           </button>
         </div>
       </ContentBlock>
-      {showGamePop && <GamePopup close={() => setShowGamePop(false)} />}
+      {showGamePop && <DonatePopup close={() => setShowGamePop(false)} />}
     </HomePageWrapper>
   );
 }

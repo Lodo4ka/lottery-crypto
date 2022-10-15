@@ -1,6 +1,6 @@
 /**
  *
- * GamePopup
+ * DonatePopup
  *
  */
 import React, { memo } from 'react';
@@ -20,7 +20,7 @@ interface Props {
 // rgba(180, 180, 202, 1)
 // rgba(180, 180, 202, 0.2)
 
-export const GamePopup = memo(({ close }: Props) => {
+export const DonatePopup = memo(({ close }: Props) => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { t, i18n } = useTranslation();
 
