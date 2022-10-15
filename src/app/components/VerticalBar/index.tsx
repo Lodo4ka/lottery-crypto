@@ -30,7 +30,6 @@ interface Props {
 }
 
 export function VerticalBar(props: Props) {
-  console.log(props.components);
   return (
     <MenuWrapper>
       {props.components.map((item, i) => (

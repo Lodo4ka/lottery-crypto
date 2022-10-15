@@ -6,6 +6,8 @@ import { breakpointHelpers } from 'utils/helpers';
 import { VerticalBar } from 'app/components/VerticalBar';
 import { IconLink } from 'app/components/IconLink';
 import { User, Gamepad, Docs } from 'svg/components';
+import { GamePopup } from '../../components/GamePopup';
+import { useState } from 'react';
 
 const HomePageWrapper = styled.div`
   flex: 1;
@@ -36,6 +38,8 @@ const ContentBlock = styled.div`
 `;
 
 export function HomePage() {
+  const [showGamePop, setShowGamePop] = useState(false);
+
   return (
     <HomePageWrapper>
       <Helmet>
@@ -61,9 +65,15 @@ export function HomePage() {
           <p>The probability of instantly withdrawing x2 is 33%</p>
         </div>
         <div className="start-game-block">
-          <button className="btn btn-primary btn-lg">Let's try</button>
+          <button
+            className="btn btn-primary btn-lg"
+            onClick={() => setShowGamePop(true)}
+          >
+            Let's try
+          </button>
         </div>
       </ContentBlock>
+      {showGamePop && <GamePopup close={() => setShowGamePop(false)} />}
     </HomePageWrapper>
   );
 }
